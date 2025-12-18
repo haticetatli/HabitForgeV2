@@ -12,6 +12,11 @@ Bu proje, **Osmaniye Korkut Ata Üniversitesi**
 Mühendislik Fakültesi – **Yazılım Mühendisliği**  
 **4. sınıf dersi** kapsamında geliştirilmiştir.
 
+### 👥 Proje Ekibi
+- **Hatice Tatlı**
+- **Gülcan Özkul**
+- **Hatice Kübra Bilgin**
+
 ---
 
 ## 📖 Proje Özeti
@@ -29,66 +34,45 @@ Klasik yapılacaklar uygulamalarından farklı olarak:
 
 ## 🚀 Kullanılan Teknolojiler ve Mimari
 
-Proje, modern web teknolojileri kullanılarak **modüler ve ölçeklenebilir** bir mimariyle geliştirilmiştir.
-
 ### ⚡ Tech Stack
 - **Framework:** Next.js 14 (App Router)
 - **Dil:** TypeScript
-- **Styling:** Tailwind CSS (Glassmorphism tasarım yaklaşımı)
+- **Styling:** Tailwind CSS (Glassmorphism)
 - **Animasyon:** Framer Motion
-- **3D Görselleştirme:** React Three Fiber (Three.js)
-- **Backend:** Next.js API Routes (Node.js tabanlı)
-- **Veri Yönetimi:** JSON File System (yerel geliştirme ve test amaçlı)
+- **3D:** React Three Fiber (Three.js)
+- **Backend:** Next.js API Routes
+- **Veri:** Yerel JSON dosyası
 
-> ⚠️ Bu proje eğitim amaçlıdır. Veriler yerel JSON dosyaları üzerinde tutulmaktadır.
+> ⚠️ Bu proje eğitim amaçlıdır. Veriler kalıcı bir veritabanı yerine yerel dosyalarda tutulmaktadır.
 
 ---
 
 ## ⚙️ Temel Özellikler
 
-### 🔐 Rol Tabanlı Erişim (RBAC)
-- **Admin Paneli:** Yalnızca yönetici yetkisine sahip kullanıcılar erişebilir
-- **Kullanıcı Dashboard:** Standart kullanıcı arayüzü
-- Giriş sırasında kullanıcı rolüne göre otomatik yönlendirme
+### 🔐 Rol Tabanlı Erişim
+- Admin Paneli
+- Kullanıcı Dashboard
+- Rol bazlı yönlendirme
 
 ### 🎮 Oyunlaştırma Sistemi
-- XP kazanımı
-- Streak (üst üste gün tamamlama) sistemi
-- Dinamik seviye atlama algoritması
-
-**XP Hesaplama Formülü:**
-```
+```text
 Kazanılan XP = (Mevcut Streak + 1) × 100
 ```
 
-### 📊 Dashboard & Görselleştirme
-- 3D XP ilerleme halkası
-- Alışkanlık ekleme / silme / güncelleme (CRUD)
-- Görev tamamlandığında animasyon ve konfeti efektleri
-
-### 🛠️ Profil Yönetimi
-- Kullanıcı bilgilerini güncelleme
-- Hesap silme (tüm veriler kalıcı olarak kaldırılır)
+- XP & Level sistemi
+- Streak takibi
+- Görsel geri bildirimler
 
 ---
 
-## 📂 Proje Dosya Yapısı
+## 📂 Proje Yapısı
 
-```
+```bash
 HabitForgeV2/
 ├── app/
-│   ├── api/
-│   ├── dashboard/
-│   ├── admin/
-│   ├── login/
-│   └── onboarding/
 ├── components/
-│   ├── 3d/
-│   └── ui/
 ├── data/
-│   └── db.json
 ├── lib/
-│   └── helpers.ts
 └── banner.PNG
 ```
 
@@ -96,26 +80,23 @@ HabitForgeV2/
 
 ## 🖥️ Kurulum ve Çalıştırma
 
-Bu proje **Node.js** tabanlıdır.  
-Bilgisayarınızda **Node.js (v18 veya üzeri)** kurulu olmalıdır.
-
-### 1️⃣ Projeyi Klonlayın
-```
+### 1️⃣ Projeyi Klonla
+```bash
 git clone https://github.com/haticetatli/HabitForgeV2.git
 cd HabitForgeV2
 ```
 
-### 2️⃣ Bağımlılıkları Yükleyin
-```
+### 2️⃣ Bağımlılıkları Kur
+```bash
 npm install
 ```
 
-### 3️⃣ Geliştirme Ortamında Çalıştırın
-```
+### 3️⃣ Çalıştır
+```bash
 npm run dev
 ```
 
-### 4️⃣ Tarayıcıdan Açın
+### 4️⃣ Tarayıcıdan Aç
 ```
 http://localhost:3000
 ```
@@ -124,24 +105,15 @@ http://localhost:3000
 
 ## 🧪 Test Hesapları
 
-| Rol | Kullanıcı Adı | Şifre | Yetki |
-|---|---|---|---|
-| Kullanıcı | hatice | hatice | Dashboard |
-| Admin | admin | 123 | Admin Paneli |
-
----
-
-## 🔮 Gelecek Geliştirmeler (Roadmap)
-
-- [ ] Mobil uygulama (React Native)
-- [ ] PostgreSQL veritabanına geçiş
-- [ ] Leaderboard & arkadaş sistemi
-- [ ] Yapay zeka destekli alışkanlık önerileri
+| Rol | Kullanıcı | Şifre |
+|---|---|---|
+| Kullanıcı | hatice | hatice |
+| Admin | admin | 123 |
 
 ---
 
 ## 📄 Lisans
 
-Bu proje, **Osmaniye Korkut Ata Üniversitesi Yazılım Mühendisliği** bölümü dersi kapsamında hazırlanmıştır.
+Bu proje, Osmaniye Korkut Ata Üniversitesi Yazılım Mühendisliği bölümü dersi kapsamında hazırlanmıştır.
 
 **© HabitForge v2.0**
