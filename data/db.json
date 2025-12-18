@@ -1,0 +1,134 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "name": "System Admin",
+      "isAdmin": true,
+      "level": 99,
+      "xp": 99999,
+      "xpToNext": 100000,
+      "streak": 999,
+      "habits": []
+    },
+    {
+      "id": 2,
+      "username": "hatice",
+      "password": "hatice",
+      "name": "Hatice",
+      "level": 17,
+      "xp": 8400,
+      "xpToNext": 11250,
+      "streak": 12,
+      "habits": [
+        {
+          "id": 1,
+          "name": "Akademi Çalışması",
+          "icon": "📚",
+          "completed": true,
+          "streak": 6
+        },
+        {
+          "id": 2,
+          "name": "Yazılım Projesi",
+          "icon": "💻",
+          "completed": true,
+          "streak": 12
+        },
+        {
+          "id": 3,
+          "name": "Spor / Pilates",
+          "icon": "🧘‍♀️",
+          "completed": true,
+          "streak": 6
+        },
+        {
+          "id": 1766066492727,
+          "name": "gülümse",
+          "icon": "✨",
+          "completed": true,
+          "streak": 2,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        },
+        {
+          "id": 1766071494120,
+          "name": "Günlük not / journal yazmak",
+          "icon": "✨",
+          "completed": true,
+          "streak": 5,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        }
+      ],
+      "email": "20227170018@ogr.oku.edu.tr"
+    },
+    {
+      "id": 3,
+      "username": "demo",
+      "password": "123",
+      "name": "Demo User",
+      "level": 5,
+      "xp": 1200,
+      "xpToNext": 2000,
+      "streak": 3,
+      "habits": []
+    },
+    {
+      "id": 1766079409448,
+      "username": "demo1",
+      "email": "demo@gmail.com",
+      "password": "abc",
+      "name": "deo3",
+      "level": 5,
+      "xp": 3700,
+      "xpToNext": 5062,
+      "streak": 17,
+      "habits": [
+        {
+          "id": 1766079544890,
+          "name": "su iç",
+          "icon": "✨",
+          "completed": true,
+          "streak": 9,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        },
+        {
+          "id": 1766079596660,
+          "name": "koşu yap",
+          "icon": "✨",
+          "completed": true,
+          "streak": 2,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        },
+        {
+          "id": 1766079826350,
+          "name": "fsgvf",
+          "icon": "✨",
+          "completed": true,
+          "streak": 14,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        },
+        {
+          "id": 1766079830891,
+          "name": "sgsgs",
+          "icon": "✨",
+          "completed": true,
+          "streak": 17,
+          "completedDates": [
+            "2025-12-18"
+          ]
+        }
+      ]
+    }
+  ]
+}
