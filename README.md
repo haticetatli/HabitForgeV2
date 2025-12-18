@@ -1,150 +1,142 @@
-```markdown
 # 🛡️ HabitForge v2.0 — Oyunlaştırılmış Alışkanlık Takip Platformu
 
-![Project Banner](https://i.hizliresim.com/t5zg57g.png)
+![HabitForge Banner](https://raw.githubusercontent.com/haticetatli/HabitForgeV2/main/banner.PNG)
 
 > **“Alışkanlıklarınızı inşa edin, seviye atlayın ve en iyi versiyonunuza dönüşün.”**
 
 ---
 
-## 🎓 Proje Künyesi ve Takım Üyeleri
+## 🎓 Proje Künyesi
 
-Bu proje, **Osmaniye Korkut Ata Üniversitesi** Mühendislik Fakültesi **4. Sınıf Yazılım Mühendisliği** dersi kapsamında geliştirilmiştir.
-
-**Proje Ekibi:**
-*   **Hatice TATLI**
-*   **Gülcan ÖZKUL**
-*   **Hatice Kübra BİLGİN**
+Bu proje, **Osmaniye Korkut Ata Üniversitesi**  
+Mühendislik Fakültesi – **Yazılım Mühendisliği**  
+**4. sınıf dersi** kapsamında geliştirilmiştir.
 
 ---
 
 ## 📖 Proje Özeti
 
-**HabitForge**, kullanıcıların günlük rutinlerini ve alışkanlıklarını takip etmelerini sağlayan; bu süreci **oyunlaştırma (gamification)** dinamikleriyle birleştirerek sürekliliği teşvik eden modern bir web uygulamasıdır.
+**HabitForge**, kullanıcıların günlük alışkanlıklarını takip etmelerini sağlayan ve bu süreci **oyunlaştırma (gamification)** mekanikleriyle destekleyen modern bir web uygulamasıdır.
 
-Klasik yapılacaklar listelerinin aksine, HabitForge:
-- Anlık geri bildirimler sunar.
-- Tamamlanan görevler için **XP (Deneyim Puanı)** kazandırır.
-- **Streak (zincir)** sistemi ile devamlılığı teşvik eder.
-- Bir **RPG oyunu** mantığında seviye atlatır.
+Klasik yapılacaklar uygulamalarından farklı olarak:
+
+- Tamamlanan görevler için **XP (Deneyim Puanı)** kazandırır  
+- **Streak (zincir)** sistemi ile sürekliliği teşvik eder  
+- Seviye atlama mantığıyla kullanıcıyı motive eder  
+- RPG oyunlarından ilham alan bir ilerleme sistemi sunar  
 
 ---
 
 ## 🚀 Kullanılan Teknolojiler ve Mimari
 
-Proje; modern web standartlarına uygun, **modüler ve ölçeklenebilir** bir mimari üzerine inşa edilmiştir.
+Proje, modern web teknolojileri kullanılarak **modüler ve ölçeklenebilir** bir mimariyle geliştirilmiştir.
 
 ### ⚡ Tech Stack
-- **Framework:** [Next.js 14](https://nextjs.org/) (App Router & Server Actions)
-- **Dil:** [TypeScript](https://www.typescriptlang.org/)
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) (Glassmorphism Tasarım)
-- **Animasyon:** [Framer Motion](https://www.framer.com/motion/)
-- **3D Görselleştirme:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/)
-- **Backend:** Next.js API Routes (Node.js tabanlı REST API simülasyonu)
-- **Veritabanı:** JSON File System (Yerel test için NoSQL simülasyonu)
+- **Framework:** Next.js 14 (App Router)
+- **Dil:** TypeScript
+- **Styling:** Tailwind CSS (Glassmorphism tasarım yaklaşımı)
+- **Animasyon:** Framer Motion
+- **3D Görselleştirme:** React Three Fiber (Three.js)
+- **Backend:** Next.js API Routes (Node.js tabanlı)
+- **Veri Yönetimi:** JSON File System (yerel geliştirme ve test amaçlı)
+
+> ⚠️ Bu proje eğitim amaçlıdır. Veriler yerel JSON dosyaları üzerinde tutulmaktadır.
 
 ---
 
-## ⚙️ Temel Özellikler (Features)
+## ⚙️ Temel Özellikler
 
-### 🔐 1. Rol Tabanlı Güvenlik (RBAC)
-- **Admin Paneli:** Yalnızca yönetici yetkisine sahip kullanıcılar erişebilir.
-- **Kullanıcı Dashboard:** Standart kullanıcılar kendi panellerine erişir.
-- **Güvenli Yönlendirme:** Giriş anında kullanıcı rolüne göre (`isAdmin`) otomatik yönlendirme yapılır.
+### 🔐 Rol Tabanlı Erişim (RBAC)
+- **Admin Paneli:** Yalnızca yönetici yetkisine sahip kullanıcılar erişebilir
+- **Kullanıcı Dashboard:** Standart kullanıcı arayüzü
+- Giriş sırasında kullanıcı rolüne göre otomatik yönlendirme
 
-### 🎮 2. Gelişmiş Oyunlaştırma Algoritması
-Kullanıcı bağlılığını artırmak için matematiksel kurallar uygulanmıştır:
+### 🎮 Oyunlaştırma Sistemi
+- XP kazanımı
+- Streak (üst üste gün tamamlama) sistemi
+- Dinamik seviye atlama algoritması
 
-**Streak Çarpanı (Multiplier):**
-```math
+**XP Hesaplama Formülü:**
+```
 Kazanılan XP = (Mevcut Streak + 1) × 100
 ```
 
-**Dinamik Level Sistemi:**
-- Seviye atladıkça gereken XP **%50 oranında artar**.
-- Sistem, **progressive overload** mantığıyla kullanıcıyı uzun vadede motive edecek şekilde tasarlanmıştır.
+### 📊 Dashboard & Görselleştirme
+- 3D XP ilerleme halkası
+- Alışkanlık ekleme / silme / güncelleme (CRUD)
+- Görev tamamlandığında animasyon ve konfeti efektleri
 
-### 📊 3. İnteraktif Dashboard ve 3D
-- **3D XP Halkası:** Three.js tabanlı seviye ilerleme görselleştirmesi.
-- **CRUD İşlemleri:** Alışkanlık ekleme, silme ve güncelleme.
-- **Konfeti Efekti:** Görev tamamlandığında kullanıcıyı ödüllendiren görsel animasyon.
-
-### 🛠️ 4. Profil Yönetimi
-- Kullanıcı adı, avatar ve şifre güncelleme.
-- **Hesap Silme:** Kullanıcının tüm verileri (habitler, XP, level) sistemden kalıcı olarak kaldırılır.
+### 🛠️ Profil Yönetimi
+- Kullanıcı bilgilerini güncelleme
+- Hesap silme (tüm veriler kalıcı olarak kaldırılır)
 
 ---
 
-## 📂 Dosya Yapısı
+## 📂 Proje Dosya Yapısı
 
-```bash
-HabitForge/
+```
+HabitForgeV2/
 ├── app/
-│   ├── api/              # Backend API Servisleri
-│   ├── dashboard/        # Kullanıcı Ana Paneli
-│   ├── admin/            # Yönetici Paneli
-│   ├── login/            # Giriş Sayfası
-│   └── onboarding/       # Tanıtım & Avatar Seçimi
+│   ├── api/
+│   ├── dashboard/
+│   ├── admin/
+│   ├── login/
+│   └── onboarding/
 ├── components/
-│   ├── 3d/               # 3D Objeler (Three.js)
-│   └── ui/               # UI Bileşenleri
+│   ├── 3d/
+│   └── ui/
 ├── data/
-│   └── db.json           # Yerel JSON Veritabanı
-└── lib/
-    └── helpers.ts        # Algoritmalar & Yardımcı Fonksiyonlar
+│   └── db.json
+├── lib/
+│   └── helpers.ts
+└── banner.PNG
 ```
 
 ---
 
 ## 🖥️ Kurulum ve Çalıştırma
 
+Bu proje **Node.js** tabanlıdır.  
+Bilgisayarınızda **Node.js (v18 veya üzeri)** kurulu olmalıdır.
+
 ### 1️⃣ Projeyi Klonlayın
-```bash
-git clone https://github.com/kullaniciadiniz/habitforge.git
-cd habitforge
+```
+git clone https://github.com/haticetatli/HabitForgeV2.git
+cd HabitForgeV2
 ```
 
-### 2️⃣ Gerekli Paketleri Yükleyin
-```bash
+### 2️⃣ Bağımlılıkları Yükleyin
+```
 npm install
-# veya
-yarn install
 ```
 
-### 3️⃣ Uygulamayı Başlatın
-```bash
+### 3️⃣ Geliştirme Ortamında Çalıştırın
+```
 npm run dev
 ```
 
-### 4️⃣ Tarayıcıda Açın
-[http://localhost:3000](http://localhost:3000)
+### 4️⃣ Tarayıcıdan Açın
+```
+http://localhost:3000
+```
 
 ---
 
 ## 🧪 Test Hesapları
 
 | Rol | Kullanıcı Adı | Şifre | Yetki |
-| :--- | :--- | :--- | :--- |
-| **Standart Kullanıcı** | hatice | hatice | Dashboard, Profil |
-| **Yönetici (Admin)** | admin | 123 | Admin Paneli |
+|---|---|---|---|
+| Kullanıcı | hatice | hatice | Dashboard |
+| Admin | admin | 123 | Admin Paneli |
 
 ---
 
-## 📸 Ekran Görüntüleri
+## 🔮 Gelecek Geliştirmeler (Roadmap)
 
-| Giriş Ekranı | Dashboard |
-| :---: | :---: |
-| ![Giriş Ekranı](public/screenshots/login-placeholder.png) | ![Dashboard](public/screenshots/dashboard-placeholder.png) |
-*(Ekran görüntülerini `public/screenshots` klasörüne ekleyip dosya yollarını güncelleyebilirsiniz)*
-
----
-
-## 🔮 Gelecek Planları (Roadmap)
-
-- [ ] 📱 React Native ile mobil uygulama
-- [ ] 🗄️ PostgreSQL veritabanına geçiş
-- [ ] 🧑‍🤝‍🧑 Arkadaş ekleme & Leaderboard sistemi
-- [ ] 🤖 Yapay zeka destekli alışkanlık önerileri
+- [ ] Mobil uygulama (React Native)
+- [ ] PostgreSQL veritabanına geçiş
+- [ ] Leaderboard & arkadaş sistemi
+- [ ] Yapay zeka destekli alışkanlık önerileri
 
 ---
 
@@ -153,4 +145,3 @@ npm run dev
 Bu proje, **Osmaniye Korkut Ata Üniversitesi Yazılım Mühendisliği** bölümü dersi kapsamında hazırlanmıştır.
 
 **© HabitForge v2.0**
-```
