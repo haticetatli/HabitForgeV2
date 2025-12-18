@@ -1,7 +1,3 @@
-Harika, iki metni birleştirerek ve ekip üyelerinin görev dağılımlarını (istediğin gibi) kaldırarak, **proje sunumu ve GitHub reposu için ideal** olan bütünleşik `README.md` dosyasını hazırladım.
-
-Bunu kopyalayıp projenin ana dizinine yapıştırabilirsin.
-
 ```markdown
 # 🛡️ HabitForge v2.0 — Oyunlaştırılmış Alışkanlık Takip Platformu
 
